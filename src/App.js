@@ -3,6 +3,7 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import redditImageFetcher from "reddit-image-fetcher";
 import Images from "../src/Images";
+import Main from "../src/components/main";
 
 function App() {
   // const [id, setId] = useState();
@@ -35,8 +36,7 @@ function App() {
             <div key={item.title}>
               {" "}
               {/*Performance optimisation*/}
-              <h2>{item.title}</h2>
-              <img src={item.img} width="500px" height="auto" />
+              <Main title={item.title} img={item.img} />
             </div>
           );
         })}
